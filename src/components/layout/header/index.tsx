@@ -14,7 +14,7 @@ function Header() {
           <Social />
         </div>
         <Button variant="ghost" className="px-2 sm:hidden">
-            <Menu height={25} strokeWidth={1.5} />
+          <Menu height={25} strokeWidth={1.5} />
         </Button>
       </div>
     </div>

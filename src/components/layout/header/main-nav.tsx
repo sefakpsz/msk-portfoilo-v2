@@ -21,7 +21,7 @@ export function MainNav({
         href="/examples/dashboard"
         className="text-xs font-semibold text-zinc-500 text-muted-foreground transition-colors hover:text-primary"
       >
-        About Me
+        About me
       </Link>
       <Link
         href="/examples/dashboard"
