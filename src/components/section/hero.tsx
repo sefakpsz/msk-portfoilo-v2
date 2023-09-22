@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "../ui/textarea"
 import { useFormik } from 'formik'
-import { contactMeSchema } from "./validations"
+import { contactMeSchema } from "../schemas"
 
 const onSubmit: any = async (values: any, actions: any) => {
   await new Promise((resolve) => setTimeout(resolve, 500))
