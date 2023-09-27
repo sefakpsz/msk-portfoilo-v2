@@ -6,7 +6,7 @@ import { Menu } from "lucide-react"
 
 function Header() {
   return (
-    <div className="border-b fixed top-0 inset-x-0">
+    <div className="border-b fixed top-0 inset-x-0 bg-white z-10">
       <div className="flex justify-between h-16 items-center px-4 max-w-7xl mx-auto">
         <h1 className="font-extrabold mr-5">MSK</h1>
         <div className="w-full items-center hidden sm:flex">
