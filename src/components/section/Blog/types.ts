@@ -4,4 +4,5 @@ export interface BlogProps {
     category: string,
     title: string,
     summary: string,
+    index: number
 }
