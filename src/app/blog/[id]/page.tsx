@@ -1,13 +1,19 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Page({ params }: { params: { id: string } }) {
 
-    const blogNumber = parseInt(params.id) === 0 ? 1 : parseInt(params.id) + 1
-
     return <Card
         className='w-full max-w-7xl space-y-6 m-auto mt-24 p-8'>
-        <p>{`Blog number is ${blogNumber}`}</p>
+        <div className="rounded-md max-h-[250px] max-w-[500px] overflow-hidden flex justify-center items-center">
+            <Image
+                src="https://images.unsplash.com/photo-1594568284297-7c64464062b1?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width={500}
+                height={250}
+                alt="Picture of the blog"
+            />
+        </div>
         <div className="flex items-center gap-3">
             <Avatar className="w-8 h-8">
                 <AvatarImage src="https://github.com/sefakpsz.png" />
