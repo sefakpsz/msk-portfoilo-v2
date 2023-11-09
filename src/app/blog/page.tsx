@@ -8,11 +8,17 @@ export default function Home() {
                 <Blog
                     key={index}
                     title='Blog Title'
-                    image='Blog image'
+                    imgSrc="https://images.unsplash.com/photo-1594568284297-7c64464062b1?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    imgH={100}
+                    imgW={200}
                     category='Blog Category'
                     summary='Blog Summary'
                     index={index}
-                    className={`${index !== 0 ? 'col-span-1 row-span-1 h-[290px]' : 'col-span-2 row-span-2 h-[600px]'}`}
+                    className=
+                    {`${index !== 0 ?
+                        'col-span-1 row-span-1 h-[290px] text-[8px]' :
+                        'col-span-2 row-span-2 h-[600px]'}`
+                    }
                 />
             ))}
         </main>

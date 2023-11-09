@@ -11,19 +11,19 @@ import { BlogProps } from "./types"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 
-const Blog: React.FC<BlogProps> = ({ className, image, category, title, summary, index }) => {
+const Blog: React.FC<BlogProps> = ({ className, imgSrc, imgH, imgW, category, title, summary, index }) => {
 
     const router = useRouter()
 
     return (
         <Card
             onClick={() => router.push(`blog/${index}`)}
-            className={twMerge('w-full max-w-7xl space-y-6 mx-auto p-8 m-[1px] hover:cursor-pointer hover:bg-slate-50', className)}>
-            <div className="rounded-md max-h-[200px] max-w-[500px] overflow-hidden flex justify-center items-center">
+            className={twMerge('w-full max-w-7xl space-y-4 p-8 hover:cursor-pointer hover:bg-slate-50 overflow-hidden', className)}>
+            <div className={`rounded-md w-max h-max overflow-hidden`}>
                 <Image
-                    src="https://images.unsplash.com/photo-1594568284297-7c64464062b1?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    width={500}
-                    height={200}
+                    src={imgSrc}
+                    width={`${index !== 0 ? 200 : 400}`}
+                    height={`${index !== 0 ? 100 : 200}`}
                     alt="Picture of the blog"
                 />
             </div>
@@ -36,9 +36,15 @@ const Blog: React.FC<BlogProps> = ({ className, image, category, title, summary,
                     <p className="font-medium font-sans text-xs">Muhammet Sefa Kapısız</p>
                 </div>
             </div>
-            <CardTitle>{category}</CardTitle>
-            <CardTitle>{title}</CardTitle>
-            <CardTitle>{summary}</CardTitle>
+
+            <div className={`${index !== 0 ?
+                'space-y-2' :
+                'space-y-8'}`
+            }>
+                <CardTitle>{category}</CardTitle>
+                <CardTitle>{title}</CardTitle>
+                <CardTitle>{summary}</CardTitle>
+            </div>
 
             {/* <Button>Comment</Button>
 
