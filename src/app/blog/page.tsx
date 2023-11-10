@@ -9,8 +9,6 @@ export default function Home() {
                     key={index}
                     title='Blog Title'
                     imgSrc="https://images.unsplash.com/photo-1594568284297-7c64464062b1?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    imgH={100}
-                    imgW={200}
                     category='Blog Category'
                     summary='Blog Summary'
                     index={index}
