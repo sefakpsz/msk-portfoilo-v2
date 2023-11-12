@@ -1,7 +1,9 @@
-import { cn } from "@/lib/utils";
-import { Github, LinkedinIcon, TwitterIcon, Instagram } from "lucide-react";
+import { cn } from "@/lib/utils"
+import { Github, LinkedinIcon, TwitterIcon, Instagram } from "lucide-react"
 
 function Social() {
+  // FIXME: use next/link instead of a
+
   return (
     <div className="ml-auto flex items-center space-x-4">
       <a
@@ -33,7 +35,7 @@ function Social() {
         <Instagram height={20} />
       </a>
     </div>
-  );
+  )
 }
 
-export default Social;
+export default Social

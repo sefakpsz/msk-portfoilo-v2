@@ -37,7 +37,7 @@ const Blog: React.FC<BlogProps> = ({ className, imgSrc, category, title, summary
                         <p className="font-medium font-sans text-xs">Muhammet Sefa Kapısız</p>
                     </div>
                 </div>
-
+                {/* FIXME: insted of js expression (if else) to "first:" and grid (you can use grid generator for it) */}
                 <div className={`${index !== 0 ?
                     'space-y-2' :
                     'space-y-8'}`

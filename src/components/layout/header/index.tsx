@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import Link from "next/link"
 
+// FIXME: use next/link instead of a
+
 function Header() {
   return (
     <div className="border-b fixed top-0 inset-x-0 bg-white z-10">

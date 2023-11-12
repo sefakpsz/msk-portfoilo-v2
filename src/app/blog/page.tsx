@@ -1,6 +1,24 @@
 import Blog from '@/components/section/Blog'
 
 export default function Home() {
+
+    // FIXME: create here a data set and use it in below
+    /*
+    const data = [
+    {
+        title: 'Blog Title',
+        category: 'Blog Category',
+        summmary: 'Blog Summary'
+    }
+    // more...
+]
+
+data.map((item, index) => (
+    <Blog key="index" {index, ...item} />
+)
+
+    */
+
     return (
         <main className="grid grid-cols-4 gap-4 p-32 w-full">
             {[...new Array(10)].map((item, index) => (
