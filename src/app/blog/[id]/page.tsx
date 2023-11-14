@@ -1,17 +1,20 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
+import { blogDatas } from "../blogDatas"
 
 export default function Page({ params }: { params: { id: string } }) {
+    console.log(params.id)
+    const blogData = blogDatas.filter(b => b.id === parseInt(params.id))[0]
 
     return <Card
         className='w-full max-w-7xl space-y-6 m-auto mt-24 p-8'>
         <div className="rounded-md max-h-[500px] max-w-[1000px] m-auto overflow-hidden flex justify-center items-center">
             <Image
-                src="https://images.unsplash.com/photo-1594568284297-7c64464062b1?auto=format&fit=crop&q=80&w=1740&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={blogData.imgSrc}
                 width={1000}
                 height={500}
-                alt="Picture of the blog"
+                alt={blogData.title}
             />
         </div>
         <div className="flex items-center gap-3">
@@ -23,9 +26,9 @@ export default function Page({ params }: { params: { id: string } }) {
                 <p className="font-medium font-sans text-xs">Muhammet Sefa Kapısız</p>
             </div>
         </div>
-        <CardTitle>{'category'}</CardTitle>
-        <CardTitle>{'title'}</CardTitle>
-        <CardTitle>{'summary'}</CardTitle>
+        <CardTitle>{blogData.title}</CardTitle>
+        <CardTitle>{blogData.category}</CardTitle>
+        <CardTitle>{blogData.summary}</CardTitle>
 
         {/* <Button>Comment</Button>
 
