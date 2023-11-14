@@ -21,6 +21,7 @@ const Blog: React.FC<BlogProps> = ({ className, imgSrc, category, title, summary
             className={twMerge('w-full max-w-7xl space-y-4 p-6 hover:cursor-pointer hover:bg-slate-50 overflow-hidden', className)}>
             <Image
                 src={imgSrc}
+                /* Burada da classname değil direkt prop olarak istediğinden malum first: kullanamıyorum. */
                 width={`${index !== 0 ? 200 : 500}`}
                 height={`${index !== 0 ? 100 : 250}`}
                 className="mx-auto rounded-md"
@@ -42,6 +43,9 @@ const Blog: React.FC<BlogProps> = ({ className, imgSrc, category, title, summary
                 https://cssgrid-generator.netlify.app/
                 https://tailwindcss.com/docs/hover-focus-and-other-states#first
                 */}
+
+
+                {/* Burada first kullanamıyorum çünkü bu bir array değil bu yüzden first: yemiyor */}
                 <div className={`${index !== 0 ?
                     'space-y-2' :
                     'space-y-8'}`
